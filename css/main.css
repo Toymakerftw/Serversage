@@ -1,0 +1,123 @@
+ main {
+    margin-bottom: 200%;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+  }
+
+  ul.floating-menu {
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    overflow: hidden;
+    border-radius: 25px;
+    background: white;
+    padding: 5px;;
+    width: auto;
+    z-index: 100;
+    position: fixed;
+    bottom: 25px;
+    right: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  }
+
+  ul.floating-menu a {
+    font-size: 0.9em;
+    display: block;
+    margin: 0 0.5em;
+    color: white;
+  }
+
+ul.floating-menu li {float: left;}
+
+ul.floating-menu li a {
+  list-style-type: none;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.floating-menu li a:hover:not(.active) {background-color: rgba(208, 208, 208, 0.214);}
+
+ul.floating-menu li a.active {background-color: rgba(208, 208, 208, 0.214);}
+
+ul.floating-menu li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.floating-menu li {float: none;}
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10%;
+}
+.grid div {
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: auto;
+}
+
+.gridheader {
+  font-size: 2em;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  text-align: center;
+  padding-top: 15%;
+  padding-right: 15%;
+  padding-left: 15%; 
+
+}
+
+.gridheader2 {
+  font-size: 2em;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  text-align: center;
+  padding-right: 15%;
+  padding-left: 15%;
+
+}
+.footer {
+  display: block;
+  padding: 1rem;
+  color: rgb(141, 141, 141);
+  font-size: 20px;
+  text-align: center;
+}
+
+.sheader {
+  color: rgb(141, 141, 141);
+  font-size: 20px;
+}
+
+.header {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+.header div {
+  display: grid;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 25px;
+  background: white;
+  width: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin: 0 0.5em;
+  color: white;
+  float: center;
+  color: black;
+  text-align: center;
+  padding: .5px;  
+}
