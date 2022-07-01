@@ -50,8 +50,8 @@ header('Location: index.php');
    Connected Devices
 <br>
 <?php 
-
-exec('nmap -sP 192.168.236.* | grep -o "192.168.236.*"',$output);
+$ip = exec('bash scripts/ip.sh');
+exec('nmap -sP "$ip" | grep -o "$ip"',$output);
 $n=count($output);
 $k=$n-1;
 echo '<div style="text-align: right;">Number of PC(s)';echo '<h1>';echo $k; echo '</h1>';echo '</div>'; 
