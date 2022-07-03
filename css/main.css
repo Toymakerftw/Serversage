@@ -78,6 +78,26 @@ ul.floating-menu li.right {float: right;}
 
 }
 
+.gridtableheader {
+  font-size: 2em;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  text-align: center;
+  padding-top: 25%;
+  padding-right: 15%;
+  padding-left: 15%; 
+
+}
+
+.gridsubheader {
+  font-size: 1.5em;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  text-align: center;
+  padding-right: 15%;
+  padding-left: 15%; 
+
+}
 .gridheader2 {
   font-size: 2em;
   font-family: 'Poppins', sans-serif;
@@ -94,6 +114,16 @@ ul.floating-menu li.right {float: right;}
   font-size: 20px;
   text-align: center;
 }
+
+.tablefooter {
+  display: block;
+  padding: 1rem;
+  padding-bottom: 10%;
+  color: rgb(141, 141, 141);
+  font-size: 20px;
+  text-align: center;
+}
+
 
 .sheader {
   color: rgb(141, 141, 141);
