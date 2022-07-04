@@ -10,7 +10,7 @@
 
 </head>
 <body style="margin: 50px;">
-<p style="  text-align: center  " class="gridtableheader"> Connected Devices</p>
+<p style="  text-align: center  " class="gridtableheader"> Unknown Devices</p>
     <br>
     <table style="  text-align: center  "class="table">
         <thead>
@@ -18,6 +18,7 @@
 				<th>Hostname</th>
 				<th>IP Address</th>
 				<th>Mac Address</th>
+				<th>Action</th>
 			</tr>
 		</thead>
 
@@ -37,7 +38,7 @@
 			}
 
             // read all row from database table
-			$sql = "SELECT * FROM currentiptable";
+            $sql = "SELECT * FROM currentiptable WHERE ip NOT IN (SELECT ip FROM knowiptable)";
 			$result = $connection->query($sql);
 
             if (!$result) {
@@ -50,8 +51,13 @@
                     <td>" . $row["hname"] . "</td>
                     <td>" . $row["ip"] . "</td>
                     <td>" . $row["mac"] . "</td>
+                    <td>
+                        <a class='btn btn-primary btn-sm' href='known.php?ip=$row[ip]&mac=$row[mac]&hname=$row[hname]'>Add as Known Device</a>
+                        <a class='btn btn-danger btn-sm' href='dump.php?ip=$row[ip]'>Monitor Traffic</a>
+                    </td>
                 </tr>";
             }
+
 
             $connection->close();
             ?>

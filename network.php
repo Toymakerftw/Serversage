@@ -81,10 +81,13 @@ for($i = 0; $i<=$n; $i++) {
   <div>
   <br>
 <?php include('table.php'); ?>
+<p class="tablefooter">Network Scan</p>
+
     </p>
 
     </p>
-    <p class="tablefooter">Network Scan</p>
+<?php include('unknowndevice.php'); ?>
+<p class="tablefooter">Network Scan</p>
   </div>
   <br>
   <br>

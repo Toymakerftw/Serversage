@@ -91,9 +91,11 @@ setInterval(get_data, 500);
   </div>
   <div>
   <p  id="disk_usd" class="gridheader">
+  <p   class="gridsubheader"> Used of</p>
   <p  id="disk_tlt" class="gridheader2">
     <?php
     echo "$disk_used\n";
+    echo "of \n";
     echo "$disk_total\n";
     ?>
     </p>
