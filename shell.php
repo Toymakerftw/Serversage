@@ -129,7 +129,7 @@ if (isset($_GET["feature"])) {
 
             *::-webkit-scrollbar-track {
                 border-radius: 8px;
-                background-color: #353535;
+                background-color: #949494;
             }
 
             *::-webkit-scrollbar {
@@ -140,7 +140,7 @@ if (isset($_GET["feature"])) {
             *::-webkit-scrollbar-thumb {
                 border-radius: 8px;
                 -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-                background-color: #bcbcbc;
+                background-color: #e8e8e8;
             }
 
             #shell {
@@ -164,7 +164,7 @@ if (isset($_GET["feature"])) {
 
             #shell-logo {
                 font-weight: bold;
-                color: #FF4180;
+                color: black;
                 text-align: center;
             }
 
@@ -240,6 +240,50 @@ if (isset($_GET["feature"])) {
             #shell-input input {
                 outline: none;
             }
+
+            ul.floating-menu {
+            font-family: 'Poppins', sans-serif;
+            list-style-type: none;
+            overflow: hidden;
+            border-radius: 25px;
+            background: white;
+            padding: 5px;;
+            width: auto;
+            z-index: 100;
+            position: fixed;
+            bottom: 25px;
+            right: 40px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+            ul.floating-menu a {
+                font-size: 0.9em;
+                display: block;
+                margin: 0 0.5em;
+                color: white;
+            }
+
+            ul.floating-menu li {float: left;}
+
+            ul.floating-menu li a {
+            list-style-type: none;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            ul.floating-menu li a:hover:not(.active) {background-color: rgba(208, 208, 208, 0.214);}
+
+            ul.floating-menu li a.active {background-color: rgba(208, 208, 208, 0.214);}
+
+            ul.floating-menu li.right {float: right;}
+
+            @media screen and (max-width: 600px) {
+            ul.floating-menu li {float: none;}
+        }
+
         </style>
 
         <script>
@@ -509,6 +553,17 @@ if (isset($_GET["feature"])) {
                 </div>
             </div>
         </div>
+        
+        <ul class="floating-menu">
+        <li><a href="dashboard.php">DASHBOARD</a></li>
+        <li><a href="shell.php">TERMINAL</a></li>
+        <li><a href="fileupload.php">FTP</a></li>
+        <li><a href="network.php">NETWORK</a></li>
+        <li><a href="/logout.php">LOGOUT</a></li>
+        <li><a href="/about.html">ABOUT</a></li>
+    </ul>
+
+
     </body>
 
 </html>
