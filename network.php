@@ -17,6 +17,8 @@ header('Location: index.php');
     <title>ServerSage</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/modal.css'>
+
     <script src='main.js'></script>
 </head>
 <body>
@@ -86,8 +88,34 @@ for($i = 0; $i<=$n; $i++) {
     </p>
 
     </p>
-<?php include('unknowndevice.php'); ?>
-<p class="tablefooter">Network Scan</p>
+    <?php 
+            $servername = "localhost";
+            $username = "root";
+            $password = "root@passwd";
+            $database = "serversage";
+      
+            // Create connection
+            $connection = new mysqli($servername, $username, $password, $database);
+      
+                  // Check connection
+            if ($connection->connect_error) {
+              die("Connection failed: " . $connection->connect_error);
+            }
+      
+                  // read all row from database table
+                  $sql = "SELECT * FROM currentiptable WHERE ip NOT IN (SELECT ip FROM knowiptable)";
+            $result = $connection->query($sql);
+      
+                  if (!$result) {
+              die("Invalid query: " . $connection->error);
+            }
+      
+                  // read data of each row
+            while($row = $result->fetch_assoc()) {
+              include('unknowndevice.php');
+              echo'<p class="tablefooter">Network Scan</p>';
+            }
+              ?>
   </div>
   <br>
   <br>
