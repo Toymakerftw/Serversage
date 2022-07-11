@@ -46,6 +46,8 @@ if (!$result) {
     <title>ServerSage</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/modal.css'>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
@@ -89,6 +91,8 @@ setInterval(get_data, 500);
     ?>
     </p>
   <p class="footer">Cpu Temprature</p>
+  <p class="modalfooter" id="myBtn"> Show Graph</p>
+
   </div>
   <div>
   <p  id="cpu_load" class="gridheader">
@@ -97,6 +101,7 @@ setInterval(get_data, 500);
     ?>
     </p>
     <p class="footer">CPU Usage</p>
+    <p class="modalfooter" id="cpuusg"> Show Graph</p>
     </div>
 
   <div>
@@ -165,5 +170,83 @@ setInterval(get_data, 500);
     }?>
     </div>
 </div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+    <p>Some text in the Modal..</p>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="cpuUsageModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+    <p>Some text in the Modal..</p>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+var modal = document.getElementById("cpuUsageModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("cpuusg");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+cpuusg.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
 </body>
 </html>
