@@ -14,6 +14,29 @@ $pro = exec('bash scripts/pro.sh');
 $net = [];
 //exec('bash scripts/net.sh', $net);
 ?>
+<?php 
+$servername = "localhost";
+$username = "root";
+$password = "root@passwd";
+$database = "serversage";
+
+// Create connection
+$connection = new mysqli($servername, $username, $password, $database);
+
+      // Check connection
+if ($connection->connect_error) {
+  die("Connection failed: " . $connection->connect_error);
+}
+// read all row from database table
+$sql = "SELECT COUNT(*) FROM currentiptable";
+$result = $connection->query($sql);
+$row = mysqli_fetch_row($result);
+
+if (!$result) {
+  die("Invalid query: " . $connection->error);
+}
+?>
+
 <?php include('navbar.php'); ?>
 <!DOCTYPE html>
 <html>
@@ -126,8 +149,21 @@ setInterval(get_data, 500);
     </p>
     <p class="footer">Cpu</p>
   </div>
-
+  <div>
+  <p  class="gridheader">
+    <?php
+    echo $row[0];
+    ?>
+    </p>
+    <?php if ($row[0] = "1") 
+    {
+      echo '<p class="footer">Connected Device</p>';
+    }
+    else 
+    {
+      echo '<p class="footer">Connected Devices</p>';
+    }?>
+    </div>
 </div>
 </body>
 </html>
-
