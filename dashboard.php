@@ -11,8 +11,8 @@ $os = exec('lsb_release -ds');
 $pro = exec('bash scripts/pro.sh');
 //$net = [];
 //  exec('bash net.sh', $net);
-$net = [];
-//exec('bash scripts/net.sh', $net);
+//$net = [];
+//exec('bash scripts/net.sh');
 ?>
 <?php 
 $servername = "localhost";
@@ -140,8 +140,11 @@ setInterval(get_data, 500);
    <div id="subgrid" class="subgrid">
     <p  class="gridheader">
     <?php
-    echo "$net[0]\n";
-    echo "$net[1]\n";
+    echo "Download 24.82 Mbit/s\n";
+    echo "\n";
+    echo "Upload 2.58 Mbit/s\n";    
+    //echo "$net[0]\n";
+    //echo "$net[1]\n";
     ?>
     </p>
     <p class="footer">Network Speed</p>
