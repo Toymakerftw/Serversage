@@ -12,7 +12,7 @@
     font-family: 'Poppins', sans-serif;
     list-style-type: none;
     overflow: hidden;
-    border-radius: 25px;
+    border-radius: 8px;
     background: white;
     padding: 5px;;
     width: auto;
@@ -60,9 +60,19 @@ ul.floating-menu li.right {float: right;}
   padding-right: 10%;
   padding-bottom: 10%;
 }
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10%;
+}
+
 .subgrid {
   background-color: white;
-  border-radius: 25px;
+  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
   width: auto;
 }
@@ -75,7 +85,7 @@ ul.floating-menu li.right {float: right;}
   }
   .gridModal div {
     background-color: white;
-    border-radius: 25px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
     width: auto;
   }
@@ -153,7 +163,7 @@ ul.floating-menu li.right {float: right;}
 .header div {
   display: grid;
   font-family: 'Poppins', sans-serif;
-  border-radius: 25px;
+  border-radius: 8px;
   background: white;
   width: auto;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);

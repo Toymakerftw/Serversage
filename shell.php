@@ -245,7 +245,7 @@ if (isset($_GET["feature"])) {
             font-family: 'Poppins', sans-serif;
             list-style-type: none;
             overflow: hidden;
-            border-radius: 25px;
+            border-radius: 8px;
             background: white;
             padding: 5px;;
             width: auto;
