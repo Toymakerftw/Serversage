@@ -114,6 +114,7 @@ setInterval(get_data, 500);
 
  <div id="subgrid" class="subgrid">
   <p id="mem_usd"  class="gridheader"></p>
+  <p   class="gridsubheader"> Used of</p>
   <p id="mem_tlt" class="gridheader2"></p>
   <p class="footer">Memory Usage</p>
   </div>
@@ -187,31 +188,35 @@ setInterval(get_data, 500);
 </div>
 
 <!-- The CPU TEMP Modal -->
+<!-- The CPU TEMP Modal -->
 <div id="myModal1" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
       <span class="close">×</span>
     <div class="modal-body">
-      <p>Some text in the Modal 1</p>
-      <p>Some other text...</p>
+      <?php
+            include('tempchart.php');
+      ?>
     </div>
   </div>
 </div>
 
-<!-- The CPU USAGE Modal -->
+
+<!-- The CPU TEMP Modal -->
 <div id="myModal2" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
       <span class="close">×</span>
     <div class="modal-body">
-      <p>Some text in the Modal 2</p>
-      <p>Some other text...</p>
+    <?php
+            include('loadchart.php');
+      ?>
     </div>
   </div>
-
 </div>
+
 
 <!-- The Connected Devices Modal -->
 <div id="myModal3" class="modal">
@@ -219,6 +224,7 @@ setInterval(get_data, 500);
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
+    <div class="modal2-body">
     <?php 
         $ukndev=($row[0] - $row1[0]);
 
@@ -257,6 +263,8 @@ setInterval(get_data, 500);
     ?>
   </div>
 </div>
+  </div>
+
 
 <script>
 
