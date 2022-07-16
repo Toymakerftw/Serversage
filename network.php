@@ -236,9 +236,9 @@ if (!$result) {
   </div>
   <div class="item">
     <?php
-    echo '<button class="modal-button" href="#" >';
+    echo '<a class="hyperlink" href="http://localhost/dump/dump.pcap">';
     echo ' Download Network Dump ';
-    echo '</button>';
+    echo '</a>';
     ?>
   </div>
 </div>
@@ -414,7 +414,7 @@ if (!$result) {
                     <td>" . $row["mac"] . "</td>
                     <td>
                     <a class='btn btn-primary btn-sm' href='known.php?ip=$row[ip]&mac=$row[mac]&hname=$row[hname]'>Add as Known Device</a>
-                    <a class='btn btn-danger btn-sm' id='myBtn' href='#?ip=$row[ip]'>Monitor Traffic</a>
+                    <a class='btn btn-danger btn-sm' id='myBtn' href='dump.php?ip=$row[ip]'>Monitor Traffic</a>
                     </td>
                 </tr>";
             }

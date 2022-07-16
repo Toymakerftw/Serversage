@@ -201,3 +201,14 @@
   color: black;
   cursor: pointer;
 }
+a.hyperlink {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
