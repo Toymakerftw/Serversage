@@ -249,9 +249,11 @@ if (!$result) {
 
   <!-- Modal content -->
   <div class="modal-content">
-      <span class="close">×</span>
+  <span class="close">×</span>
+    <P class="modal-header"> Connected Device </P> 
     <div class="modal-body">
-    <p style="text-align: center" class="gridtableheader"> Connected Devices</p>
+      <!-- <P class="modal-header"> Connected Device </P> -->
+    <!-- <p style="text-align: center" class="gridtableheader"> Connected Devices</p>-->
     <br>
     <table style="  text-align: center  "class="table">
         <thead>
@@ -308,8 +310,9 @@ if (!$result) {
   <!-- Modal content -->
   <div class="modal-content">
       <span class="close">×</span>
+      <P class="modal-header"> Known Device </P> 
     <div class="modal-body">
-    <p style="  text-align: center  " class="gridtableheader"> Known Devices</p>
+    <!-- <p style="  text-align: center  " class="gridtableheader"> Known Devices</p>-->
     <br>
     <table style="  text-align: center  "class="table">
         <thead>
@@ -370,8 +373,9 @@ if (!$result) {
   <!-- Modal content -->
   <div class="modal-content">
       <span class="close">×</span>
+      <P class="modal-header"> Unknown Device </P> 
     <div class="modal-body">
-    <p style="  text-align: center  " class="gridtableheader"> Unknown Devices</p>
+    <!-- <p style="  text-align: center  " class="gridtableheader"> Unknown Devices</p>-->
     <br>
     <table style="  text-align: center  "class="table">
         <thead>
