@@ -123,7 +123,7 @@ if (isset($_GET["feature"])) {
                 margin: 0;
                 padding: 0;
                 background: white;
-                color: black;
+                color: white;
                 font-family: monospace;
             }
 
@@ -133,7 +133,7 @@ if (isset($_GET["feature"])) {
             }
 
             *::-webkit-scrollbar {
-                width: 10px;
+                width: 5px;
                 height: 10px;
             }
 
@@ -144,7 +144,8 @@ if (isset($_GET["feature"])) {
             }
 
             #shell {
-                background: white;
+                background: black;
+                border-radius: 8px;
                 max-width: 900px;
                 margin: 50px auto 0 auto;
                 box-shadow: 0 0 5px rgba(0, 0, 0, .3);
@@ -164,7 +165,7 @@ if (isset($_GET["feature"])) {
 
             #shell-logo {
                 font-weight: bold;
-                color: black;
+                color: #75DF0B;
                 text-align: center;
             }
 
@@ -225,7 +226,7 @@ if (isset($_GET["feature"])) {
                 line-height: 30px;
                 border: none;
                 background: transparent;
-                color: black;
+                color: white;
                 font-family: monospace;
                 font-size: 10pt;
                 width: 100%;
