@@ -69,7 +69,7 @@ if (!$result) {
   <link rel="stylesheet" href="css/network.css">
   <link rel="stylesheet" href="css/modal.css">
 
-  <title>Document</title>
+  <title>ServerSage</title>
 </head>
 
 <body>
