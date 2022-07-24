@@ -5,5 +5,5 @@
     <li><a href="fileupload.php">FTP</a></li>
     <li><a href="network.php">NETWORK</a></li>
     <li><a href="/logout.php">LOGOUT</a></li>
-    <li><a href="/about.html">ABOUT</a></li>
+    <li><a href="/about.php">ABOUT</a></li>
 </ul>

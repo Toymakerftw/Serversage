@@ -116,6 +116,22 @@ main {
     text-decoration: underline;
 }
 
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    background: white;
+    width: auto;
+    padding: .5vh;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
 @keyframes fadein {
     from {
         opacity:0;
