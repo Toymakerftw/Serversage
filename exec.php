@@ -1,4 +1,5 @@
 <?php
+include('bot.php');
 // Execute Bash scripts and save values to variables
 $cpu = exec('bash scripts/cpu.sh');
 $temp = exec('bash scripts/temp.sh');

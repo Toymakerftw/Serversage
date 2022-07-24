@@ -35,13 +35,14 @@ if (!$result) {
   die("Invalid query: " . $connection->error);
 }
 
+if ($row[0]!=$row1[0]) {
 // Bot Stuff
 include('botconfig.php');
 exec("bash telegram -t $token -c $chatid 'Network Scan Initiated ...'");
 exec("bash telegram -t $token -c $chatid '$row[0] Device Connected'");
 exec("bash telegram -t $token -c $chatid '$row1[0] Known Device'");
 exec("bash telegram -t $token -c $chatid '$ukndev Unknown Device'");
-
+}
 /*
 botconfig.php 
 <?php
