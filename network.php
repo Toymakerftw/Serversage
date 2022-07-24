@@ -13,6 +13,8 @@ if (!isset($_SESSION['usrname'])) {
 //exec('bash scripts/net.sh', $net);
 include('currentip.php');
 include('navbar.php');
+include('bot.php');
+
 $servername = "localhost";
 $username = "root";
 $password = "root@passwd";
@@ -186,14 +188,13 @@ if (!$result) {
         echo $ukndev;
         echo ' Unknown Device';
         echo '</button>';
-
         //echo "<p>";
         //echo $ukndev;
         //echo "<span style='font-size: 1.5rem' 'text-align: center'> Unknown Device</span></p>";
       } else {
         echo '<button class="modal-button" href="#myModal3" >';
         echo $ukndev;
-        echo ' Unknown Device';
+        echo ' Unknown Devices';
         echo '</button>';
         //echo "<p>";
         //echo $ukndev;
